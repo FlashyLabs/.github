@@ -3,8 +3,21 @@
   "org": "org/flashylabs",
   "assertedBy": "agent/flashylabs-github-ci",
   "defaultAuthor": "person/michael",
+<<<<<<< HEAD
   "authors": {},
   "visibility": "public",
+=======
+  "authors": {
+    "121371508+flashylabs@users.noreply.github.com": "person/michael",
+    "121371508+lifeintl@users.noreply.github.com": "person/michael",
+    "claude@anthropic.com": "agent/claude",
+    "michael@flashygroup.com": "person/michael",
+    "michael@gda.capital": "person/michael",
+    "michaelgord@michaels-macbook-pro.local": "person/michael",
+    "noreply@anthropic.com": "agent/claude"
+  },
+  "visibility": "private",
+>>>>>>> 48ed071 (Adopt checkpoint/1 alongside the other two)
   "lexicon": "imperative",
   "prBase": "https://github.com/FlashyLabs/.github/pull/"
 }

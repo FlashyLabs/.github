@@ -1,0 +1,6 @@
+{
+  "origin": "repo/flashylabs-github",
+  "fragments": [
+    "shiplog.fragment.json"
+  ]
+}
