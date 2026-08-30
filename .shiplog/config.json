@@ -4,7 +4,7 @@
   "assertedBy": "agent/flashylabs-github-ci",
   "defaultAuthor": "person/michael",
   "authors": {},
-  "visibility": "private",
+  "visibility": "public",
   "lexicon": "imperative",
   "prBase": "https://github.com/FlashyLabs/.github/pull/"
 }

@@ -2,25 +2,25 @@
   "shipped": "1",
   "source": "repo/flashylabs-github",
   "org": "org/flashylabs",
-  "generated": "2026-08-30T15:59:51.822Z",
+  "generated": "2026-08-30T17:00:44.996Z",
   "entries": [
     {
       "id": "ship/flashylabs-github/b2ecd96a6bf2",
       "repo": "repo/flashylabs-github",
-      "at": "2026-08-30T15:59:30Z",
+      "at": "2026-08-30T15:59:30+00:00",
       "kind": "feature",
       "title": "Adopt shipped/1 and backlog/1",
       "by": [
-        "person/michael"
+        "agent/unattributed"
       ],
       "asserted": "2026-08-30",
       "assertedBy": "agent/flashylabs-github-ci",
-      "visibility": "private",
+      "visibility": "public",
       "detail": "The org profile repository is public-facing — it is what a stranger sees on the\norganisation's GitHub page — so a change to it is worth recording, and the\nhygiene check now asks any repository with content for a record rather than\nonly one with source files.\n\nOne entry, sealed. Filed under `org/flashylabs` and `repo/flashylabs-github`:\nthe name `.github` is a convention every owner shares and identifies nothing on\nits own, so the owner is the identity here.\n\nKind: feature",
       "refs": {
         "commit": "b2ecd96a6bf2b7ba1c78bc9a00d562e7fa15227b"
       },
-      "digest": "c06ad309c2076cbf46f166bababd775d0a2cee46aa45d4102d5494406e9e8516"
+      "digest": "342d35d9553d931fec4138bc9fafad4344f0d1672091ac2fc505cc0ec07d48bb"
     },
     {
       "id": "ship/flashylabs-github/28bacfc09610",
@@ -33,11 +33,11 @@
       ],
       "asserted": "2026-08-30",
       "assertedBy": "agent/flashylabs-github-ci",
-      "visibility": "private",
+      "visibility": "public",
       "refs": {
         "commit": "28bacfc09610834ea4d59ab854247728da8160ad"
       },
-      "digest": "3c0e9aa4ea0029f522b26ac9599f6859fd934dcfc56ab66a4ed34bdfebf6d437"
+      "digest": "9dae50aa1a17fa3da451207a02e86446e6d0de48332b98a31e28d4302ce3295a"
     }
   ]
 }
