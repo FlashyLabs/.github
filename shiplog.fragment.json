@@ -2,8 +2,98 @@
   "shipped": "1",
   "source": "repo/flashylabs-github",
   "org": "org/flashylabs",
-  "generated": "2026-08-30T17:00:44.996Z",
+  "generated": "2026-08-30T18:23:09.409Z",
   "entries": [
+    {
+      "id": "ship/flashylabs-github/5c1f5e84dccc",
+      "repo": "repo/flashylabs-github",
+      "at": "2026-08-30T18:22:57Z",
+      "kind": "other",
+      "title": "Re-emit after rebase",
+      "by": [
+        "agent/unattributed"
+      ],
+      "asserted": "2026-08-30",
+      "assertedBy": "agent/flashylabs-github-ci",
+      "visibility": "public",
+      "detail": "Kind: chore",
+      "refs": {
+        "commit": "5c1f5e84dccc1b71ff447a61a07009570d5c218a"
+      },
+      "digest": "179f6b05d55bd4075521009743aff7e3d76dc8f9001036a9326a6a8f1552e175"
+    },
+    {
+      "id": "ship/flashylabs-github/994a13c2c149",
+      "repo": "repo/flashylabs-github",
+      "at": "2026-08-30T18:22:17Z",
+      "kind": "other",
+      "title": "Re-emit after rebase",
+      "by": [
+        "agent/unattributed"
+      ],
+      "asserted": "2026-08-30",
+      "assertedBy": "agent/flashylabs-github-ci",
+      "visibility": "public",
+      "detail": "Kind: chore",
+      "refs": {
+        "commit": "994a13c2c14925ef8b673ba82032960d84978983"
+      },
+      "digest": "a00dfeb741435ffdbc1e586d21ac802860ea34849bb44ba08df910ecfa6fcf70"
+    },
+    {
+      "id": "ship/flashylabs-github/a7b7fd0091cc",
+      "repo": "repo/flashylabs-github",
+      "at": "2026-08-30T18:22:16Z",
+      "kind": "feature",
+      "title": "Adopt checkpoint/1 alongside the other two",
+      "by": [
+        "agent/unattributed"
+      ],
+      "asserted": "2026-08-30",
+      "assertedBy": "agent/flashylabs-github-ci",
+      "visibility": "public",
+      "detail": "Kind: feature",
+      "refs": {
+        "commit": "a7b7fd0091cc8471b74e3c88e03fabeb1bf7f724"
+      },
+      "digest": "bc163c2e3f5797b6c75fca12a2eab6cabf90314fd2339a92b37c4f869a0f8491"
+    },
+    {
+      "id": "ship/flashylabs-github/1bfd68375344",
+      "repo": "repo/flashylabs-github",
+      "at": "2026-08-30T18:21:39Z",
+      "kind": "docs",
+      "title": "Declare a licence: Apache-2.0",
+      "by": [
+        "agent/unattributed"
+      ],
+      "asserted": "2026-08-30",
+      "assertedBy": "agent/flashylabs-github-ci",
+      "visibility": "public",
+      "detail": "The organisation profile. Its only code is the vendored emitters, which are\nApache-2.0 where they come from, so copyleft here would attach to nothing of\nours.\n\nAn absent licence is not permissive; it is all rights reserved by default.\n\nKind: docs",
+      "refs": {
+        "commit": "1bfd6837534455e3fae2d9e016b26b802baa0359"
+      },
+      "digest": "4a56f1cad379566acf88fe6e7b3ae75efc5264c0c05582c39c8f464c1cf98d78"
+    },
+    {
+      "id": "ship/flashylabs-github/be409e9dd395",
+      "repo": "repo/flashylabs-github",
+      "at": "2026-08-30T17:02:34Z",
+      "kind": "fix",
+      "title": "Re-vendor the emitter, and publish this log",
+      "by": [
+        "agent/unattributed"
+      ],
+      "asserted": "2026-08-30",
+      "assertedBy": "agent/flashylabs-github-ci",
+      "visibility": "public",
+      "detail": "The vendored copy here predated four changes: an emit that unions rather\nthan replaces, a per-entry privacy hold, a guard that stops an agent's\ncommits being filed under a person, and a filter for this format's own\nrefresh commits.\n\nA stale vendored copy does not fail. It disagrees with the source about\nwhat it was told to do — which is how a hold added this morning did\nnothing in sixteen repositories and marked the held entry public.\nestate-hygiene now compares every vendor-*.mjs byte-for-byte against the\npackage it came from, and this repository was one of nine it caught.\n\nvisibility is public. Everything derived has been private since adoption;\nthis is the decision that makes it a changelog anyone can read.\n\nKind: fix",
+      "refs": {
+        "commit": "be409e9dd395cbceac1ef04762ff5536dcbfa921"
+      },
+      "digest": "f7074208712116c8ab8ec61a62ac2052057e39ef474b6eaf6fee91c43c8ad49a"
+    },
     {
       "id": "ship/flashylabs-github/b2ecd96a6bf2",
       "repo": "repo/flashylabs-github",
