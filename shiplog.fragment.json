@@ -2,8 +2,26 @@
   "shipped": "1",
   "source": "repo/flashylabs-github",
   "org": "org/flashylabs",
-  "generated": "2026-08-30T19:25:40.480Z",
+  "generated": "2026-08-30T19:33:23.885Z",
   "entries": [
+    {
+      "id": "ship/flashylabs-github/134a251e9f0d",
+      "repo": "repo/flashylabs-github",
+      "at": "2026-08-30T19:33:11Z",
+      "kind": "docs",
+      "title": "Carry the house rules, so an agent stops having to guess them",
+      "by": [
+        "agent/unattributed"
+      ],
+      "asserted": "2026-08-30",
+      "assertedBy": "agent/flashylabs-github-ci",
+      "visibility": "public",
+      "detail": "Twenty of thirty-five repositories had no CLAUDE.md or AGENTS.md, and an\nagent with no repository doc guesses. Every avoidable mistake made across\nthis estate on 2026-08-30 happened in a repository without one — and each\nwas a fact that is true everywhere rather than a fact about that\nrepository:\n\n  work pushed to `main` in eleven repositories whose default branch is not\n  `main`, deploying nothing and read by nobody, with the push succeeding;\n\n  a vendored emitter trusted after its source changed, so a privacy hold\n  added that morning did nothing in sixteen repositories and published the\n  entry it was meant to withhold;\n\n  a copyright holder guessed as the studio on a client's site;\n\n  measurements reported from a working copy while claiming to describe the\n  branch that ships — twice, in two tools, by two agents, four hours apart.\n\nNone of that is repo-specific knowledge, and writing it thirty-five times\nwould drift the first time it changed. It is declared in\n`tools/estate-house-rules.mjs` in flashyos and synced between two markers.\nEverything outside the markers is this repository's own and is never\ntouched.\n\nWhere this file is new it says the repository is not yet described, which\nis true. A generated description would be wrong and would read as\nauthoritative; admitting the gap is a task somebody can close in a minute.\n\nKind: docs",
+      "refs": {
+        "commit": "134a251e9f0dcf1538a70539ca6504f021d8e33d"
+      },
+      "digest": "779db441e7ec1b9f623949ea893961e2b799545e6b70f21d64bceedbe8e8343f"
+    },
     {
       "id": "ship/flashylabs-github/e52ace6e477a",
       "repo": "repo/flashylabs-github",
