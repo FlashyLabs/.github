@@ -1,0 +1,5 @@
+{
+  "source": "repo/flashylabs-github",
+  "org": "org/flashylabs",
+  "agent": "agent/flashylabs-github-bot"
+}

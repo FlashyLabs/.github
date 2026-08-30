@@ -1,0 +1,25 @@
+{
+  "shipped": "1",
+  "source": "repo/flashylabs-github",
+  "org": "org/flashylabs",
+  "generated": "2026-08-30T15:59:21.192Z",
+  "entries": [
+    {
+      "id": "ship/flashylabs-github/28bacfc09610",
+      "repo": "repo/flashylabs-github",
+      "at": "2026-08-25T23:11:42+02:00",
+      "kind": "feature",
+      "title": "Create README.md",
+      "by": [
+        "person/michael"
+      ],
+      "asserted": "2026-08-30",
+      "assertedBy": "agent/flashylabs-github-ci",
+      "visibility": "private",
+      "refs": {
+        "commit": "28bacfc09610834ea4d59ab854247728da8160ad"
+      },
+      "digest": "3c0e9aa4ea0029f522b26ac9599f6859fd934dcfc56ab66a4ed34bdfebf6d437"
+    }
+  ]
+}

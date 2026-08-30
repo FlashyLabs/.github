@@ -1,0 +1,10 @@
+{
+  "source": "repo/flashylabs-github",
+  "org": "org/flashylabs",
+  "assertedBy": "agent/flashylabs-github-ci",
+  "defaultAuthor": "person/michael",
+  "authors": {},
+  "visibility": "private",
+  "lexicon": "imperative",
+  "prBase": "https://github.com/FlashyLabs/.github/pull/"
+}
