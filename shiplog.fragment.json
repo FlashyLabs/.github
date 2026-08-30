@@ -2,8 +2,44 @@
   "shipped": "1",
   "source": "repo/flashylabs-github",
   "org": "org/flashylabs",
-  "generated": "2026-08-30T18:23:09.409Z",
+  "generated": "2026-08-30T19:25:40.480Z",
   "entries": [
+    {
+      "id": "ship/flashylabs-github/e52ace6e477a",
+      "repo": "repo/flashylabs-github",
+      "at": "2026-08-30T19:25:06Z",
+      "kind": "fix",
+      "title": "Name a copyright holder, and stop granting what was never ours",
+      "by": [
+        "agent/unattributed"
+      ],
+      "asserted": "2026-08-30",
+      "assertedBy": "agent/flashylabs-github-ci",
+      "visibility": "public",
+      "detail": "Two errors from the licence sweep of 2026-08-30, found by putting the\nestate's licences in one register and comparing.\n\nA LICENCE THAT NAMED NOBODY\n\nEleven repositories carried a bare Apache-2.0 text with no copyright line\nat all. That is not a missing file — it is a file that answers the\nquestion wrongly. It reads as a grant, and no reader can tell who made it\nor whether they were entitled to. Every LICENSE now opens with the holder\nand one line saying what the repository is.\n\nAN OPEN LICENCE ON SOMEBODY ELSE'S PROPERTY\n\nkopman-build and buildos are a construction firm's marketing site and the\napplication behind that engagement. Both carried AGPL-3.0-only, which\noffers a client's own site to anyone willing to publish their changes.\nNobody decided that; it was the default that got reached for. Both are now\nall rights reserved, held by Kopman Build, with a line saying ownership is\ngoverned by the agreement between the firm and the studio rather than by\nthe file.\n\nThe same care had already been taken for marco.law an hour earlier and\nthen not taken here, which is the argument for a register rather than for\nbeing more careful next time.\n\nEight further repositories moved from an unattributed Apache-2.0 to all\nrights reserved: the org profile, the Terraform that can delete\nproduction, three brand properties and the three Life repositories.\nflashy-sdk is among them and its package.json already said UNLICENSED —\nthe LICENSE file had been contradicting its own manifest.\n\n`tools/estate-licences.mjs` in flashyos is now the one declaration, and it\nreports a checkout and a default branch separately, because conflating\nthose is the mistake this estate's tooling keeps making.\n\nKind: fix",
+      "refs": {
+        "commit": "e52ace6e477a6b9d1b24897882062259aff989a2"
+      },
+      "digest": "1c1ec43f58b8827f2053736c0466e76a33d5d7b8166b2531f559bd199e2a85e0"
+    },
+    {
+      "id": "ship/flashylabs-github/d8acbfcc53b0",
+      "repo": "repo/flashylabs-github",
+      "at": "2026-08-30T19:13:11Z",
+      "kind": "fix",
+      "title": "Re-vendor: carry the emitter this repository is actually meant to run",
+      "by": [
+        "agent/unattributed"
+      ],
+      "asserted": "2026-08-30",
+      "assertedBy": "agent/flashylabs-github-ci",
+      "visibility": "public",
+      "detail": "`estate-hygiene`'s vendored-emitter check found five copies behind the\npackage they came from. This is the same class of failure the check was\nwritten for, caught this time before it did anything: a per-entry privacy\nhold added to the emitter on 2026-08-30 did nothing in sixteen\nrepositories carrying a copy from an hour earlier, and marked the held\nentry public.\n\nA stale vendored file does not break. It disagrees — silently, and about\nwhichever field somebody has just changed.\n\nKind: fix",
+      "refs": {
+        "commit": "d8acbfcc53b032f084694f1304be6168d048afab"
+      },
+      "digest": "624ac3d27974b6ee2f52fa32926d43ae74bea7d1eadd3d71484ae01029ee3ff6"
+    },
     {
       "id": "ship/flashylabs-github/5c1f5e84dccc",
       "repo": "repo/flashylabs-github",
