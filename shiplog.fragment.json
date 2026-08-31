@@ -2,8 +2,44 @@
   "shipped": "1",
   "source": "repo/flashylabs-github",
   "org": "org/flashylabs",
-  "generated": "2026-08-31T01:42:57.073Z",
+  "generated": "2026-08-31T02:21:41.538Z",
   "entries": [
+    {
+      "id": "ship/flashylabs-github/06f426afe385",
+      "repo": "repo/flashylabs-github",
+      "at": "2026-08-31T02:21:31Z",
+      "kind": "other",
+      "title": "Re-vendor the checkpoint emitter: an unused import was dropped",
+      "by": [
+        "agent/unattributed"
+      ],
+      "asserted": "2026-08-31",
+      "assertedBy": "agent/flashylabs-github-ci",
+      "visibility": "public",
+      "detail": "Byte-identical to `packages/checkpoint/vendor-checkpoint.mjs` in flashyos,\nwhich is the only way a vendored file is allowed to change. The difference\nwas one unused specifier, so nothing here behaved differently — which is\nprecisely why it sat undetected across thirteen repositories: a stale\nvendored copy does not break, it disagrees, and only a byte comparison\nnotices before the disagreement matters.\n\nKind: chore",
+      "refs": {
+        "commit": "06f426afe385db32493f24d7f832609a34411c09"
+      },
+      "digest": "0bfff749723e1458d80d8a53d91c773ae0e75ffa88eafa0dc200fdf34b5fe408"
+    },
+    {
+      "id": "ship/flashylabs-github/b4c803e0db11",
+      "repo": "repo/flashylabs-github",
+      "at": "2026-08-31T02:20:05Z",
+      "kind": "other",
+      "title": "Re-vendor the backlog emitter: it can revise an item now",
+      "by": [
+        "agent/unattributed"
+      ],
+      "asserted": "2026-08-31",
+      "assertedBy": "agent/flashylabs-github-ci",
+      "visibility": "public",
+      "detail": "`file` has taken `--wants` since the beginning and nothing could add them\nafterwards, so every item filed across the estate — all of them filed without\nwants — was permanently invisible to the matcher, which refuses an item that\nnames no `capabilitiesWanted`. A format whose central field is\nwrite-once-at-creation is a format whose central field is empty.\n\n`revise` changes everything about an item except its visibility. Promotion\nstays a separate verb because it is a separate decision: it refuses anything\nbut a `person/` id, and folding it in would give a revision the power to\npublish. Unmentioned fields are left alone — `close` is a revision too, and\nclearing on absence would strip every want in the repository.\n\nCopied byte-identical from flashyos rather than edited here. A stale vendored\nfile does not break; it disagrees, silently, about exactly the field somebody\nhas just added.\n\nKind: chore",
+      "refs": {
+        "commit": "b4c803e0db115037557bc7396f16f392efc233c5"
+      },
+      "digest": "8a9d4bdf51a1724b1891f251599056a54b45942ea157b1e84b75f9af5f05b137"
+    },
     {
       "id": "ship/flashylabs-github/e80c69860d50",
       "repo": "repo/flashylabs-github",
