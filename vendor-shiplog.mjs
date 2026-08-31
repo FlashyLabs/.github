@@ -224,10 +224,16 @@ export function isMachineAddress(email) {
  * entries in flashy-ledger reading "shipped/1: refresh the log". A generated
  * file being regenerated is not work, and counting it inflates both the entry
  * count and the agent share — the two numbers this record exists to make
- * honest. Anchored to the exact subjects the emitted workflows commit under,
- * so a person writing about the format is not filtered out.
+ * honest. Anchored to the subjects the emitted workflows commit under, with
+ * room for the suffixes those subjects have since grown — ", and the
+ * checkpoint over it" when a checkpoint rides along, and the "[skip ci]"
+ * deploy-budget marker. The first version anchored on `$` exactly, and the
+ * day the checkpoint suffix appeared every refresh commit in the estate
+ * started sealing as a shipped entry under agent/unattributed. The lookahead
+ * keeps the old guarantee: a subject that merely continues the phrase
+ * ("refresh the logic") is a person's commit and is kept.
  */
-const BOOKKEEPING_RE = /^(shipped\/1: refresh the log|backlog\/1: refresh the fragment)$/
+const BOOKKEEPING_RE = /^(shipped\/1: refresh the log|backlog\/1: refresh the fragment)(?![a-z])/
 
 export const isOwnBookkeeping = (subject) => BOOKKEEPING_RE.test((subject ?? '').trim())
 
@@ -338,7 +344,29 @@ export function fromCommits(commits, options) {
  * misleading label. The package's `view()` grants partner to a *partner*, and
  * an unauthenticated fetch is not one.
  */
-export const publicView = (entries) => entries.filter((e) => e?.visibility === 'public')
+/**
+ * The public projection, with the hold applied a second time.
+ *
+ * `visibility` is inside an entry's digest, so an entry sealed public stays
+ * sealed public — re-deriving it to change that is the restatement
+ * append-only forbids. Applying the hold only at derivation therefore left
+ * `.shiplog/held.json` unable to do the one job it most urgently has:
+ * retracting something already served. So it applies here as well, and the
+ * entry keeps its seal, its digest and its place in the record while simply
+ * ceasing to be handed out.
+ *
+ * The sha is read from the entry, or resolved from the id where an entry
+ * carries none — an id's last segment is the sha, and a hold that silently
+ * missed those entries would look exactly like a hold that worked.
+ */
+export const publicView = (entries, held = {}) =>
+  entries.filter((e) => {
+    if (e?.visibility !== 'public') return false
+    const sha = e.sha || String(e.id ?? '').split('/').pop() || ''
+    // Same rule as derivation, stated the same way: a full sha or the
+    // twelve-character form `held.json` is written in.
+    return !(held[sha] || held[sha.slice(0, 12)])
+  })
 
 export function servedPaths(config, out) {
   const declared = config?.serve
@@ -487,7 +515,7 @@ function run(argv) {
   // publishes an empty log. That is the intended first state: publishing is a
   // decision somebody takes, not a side effect of running a script over a
   // decade of branch names.
-  const open = publicView(entries)
+  const open = publicView(entries, held)
   for (const path of servedPaths(config, out)) {
     mkdirSync(dirname(path), { recursive: true })
     writeFileSync(path, `${JSON.stringify(fragmentOf(config, open), null, 2)}\n`)
