@@ -2,8 +2,26 @@
   "shipped": "1",
   "source": "repo/flashylabs-github",
   "org": "org/flashylabs",
-  "generated": "2026-08-30T19:33:23.885Z",
+  "generated": "2026-08-31T01:42:57.073Z",
   "entries": [
+    {
+      "id": "ship/flashylabs-github/e80c69860d50",
+      "repo": "repo/flashylabs-github",
+      "at": "2026-08-31T01:41:31Z",
+      "kind": "feature",
+      "title": "Publish a directory/1 fragment, so this repository's signatures resolve",
+      "by": [
+        "agent/unattributed"
+      ],
+      "asserted": "2026-08-31",
+      "assertedBy": "agent/flashylabs-github-ci",
+      "visibility": "public",
+      "detail": "Every sealed entry here carries `assertedBy: agent/<slug>-ci` and every filed\nitem carries `agent/<slug>-bot`, and nothing in the estate defined either. An\n`assertedBy` naming an id nothing declares reads as provenance and carries\nnone, which is worse than leaving the field out — across the estate that was\n2,478 edges citing identities that formally did not exist.\n\nThe repositories that already had a fragment each hand-wrote one around their\nAAO charter. This repository has no charter, and neither will an outside\nadopter of `shipped/1` on their first push, so the fragment comes from\n`vendor-directory.mjs`: dependency-free, derived from the two config files\nthat already do the stamping, and validated here by the vendored checker.\n\nIt does not declare an organisation. `.shiplog/config.json` carries an `org`\nfield that adoption filled in with this repository's own slug, and in sixteen\nrepositories that names a company which does not exist. A repository is not\nthe authority for which organisation answers for it; defining one here to\nraise a provenance number would put the fiction into the published graph. The\nemitter says so on every run, and the gap is filed rather than papered over.\n\nKind: feat",
+      "refs": {
+        "commit": "e80c69860d50ad0d84dd90e7e3db78b8ae534a37"
+      },
+      "digest": "2727e82fa7ae645f6d8ab149c73fbee138e2d146b4b8d268f6149c2ca12fd7f6"
+    },
     {
       "id": "ship/flashylabs-github/134a251e9f0d",
       "repo": "repo/flashylabs-github",
