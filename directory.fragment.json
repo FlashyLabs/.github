@@ -1,0 +1,53 @@
+{
+ "directory": "0.1",
+ "source": "repo/flashylabs-github",
+ "generated": "2026-08-31",
+ "nodes": [
+  {
+   "asserted": "2026-08-31",
+   "assertedBy": "person/michael",
+   "expires": "2027-08-31",
+   "visibility": "public",
+   "id": "agent/flashylabs-github-bot",
+   "kind": "Agent",
+   "name": "Backlog emitter",
+   "description": "The tool that files and promotes this repository's intentions. It emits backlog/1 and signs each one as agent/flashylabs-github-bot."
+  },
+  {
+   "asserted": "2026-08-31",
+   "assertedBy": "person/michael",
+   "expires": "2027-08-31",
+   "visibility": "public",
+   "id": "agent/flashylabs-github-ci",
+   "kind": "Agent",
+   "name": "Record emitter",
+   "description": "The tool that derives and seals this repository's record. It emits shipped/1 and signs each one as agent/flashylabs-github-ci."
+  }
+ ],
+ "edges": [
+  {
+   "asserted": "2026-08-31",
+   "assertedBy": "person/michael",
+   "expires": "2027-08-31",
+   "visibility": "public",
+   "type": "delegatedTo",
+   "from": "person/michael",
+   "to": "agent/flashylabs-github-bot",
+   "scope": [
+    "backlog/1"
+   ]
+  },
+  {
+   "asserted": "2026-08-31",
+   "assertedBy": "person/michael",
+   "expires": "2027-08-31",
+   "visibility": "public",
+   "type": "delegatedTo",
+   "from": "person/michael",
+   "to": "agent/flashylabs-github-ci",
+   "scope": [
+    "shipped/1"
+   ]
+  }
+ ]
+}
