@@ -2,8 +2,26 @@
   "shipped": "1",
   "source": "repo/flashylabs-github",
   "org": "org/flashylabs",
-  "generated": "2026-09-01T09:30:17.185Z",
+  "generated": "2026-09-01T14:35:22.228Z",
   "entries": [
+    {
+      "id": "ship/flashylabs-github/8123f09e976e",
+      "repo": "repo/flashylabs-github",
+      "at": "2026-09-01T14:33:31Z",
+      "kind": "fix",
+      "title": "Re-vendor check-directory.mjs: enforce what every edge type must carry",
+      "by": [
+        "agent/unattributed"
+      ],
+      "asserted": "2026-09-01",
+      "assertedBy": "agent/flashylabs-github-ci",
+      "visibility": "public",
+      "detail": "The vendored checker had hand-written blocks for three of the sixteen edge\ntypes and nothing for the other thirteen, so engaged without a basis,\ndelegatedTo without a scope and issued without a date all validated clean —\nin thirty identical copies that agreed with each other perfectly.\n\nIt reads a requires table now, mirroring EDGE_REQUIRES in\n@flashyos/directory, with one conditional: `declares` needs a role when it\nnames an agent and not when it names a machine surface. That split was\nmeasured, not decided — across the estate all 88 agent declarations carry a\nrole and none of the 43 surface declarations do.\n\nflashyos/tools/vendored-directory.test.mjs differentials this copy against\nthe package by verdict, and asserts every estate copy is byte-identical to\nit. This repository's fragment passes the stricter checker unchanged.\n\nKind: fix",
+      "refs": {
+        "commit": "8123f09e976e2baf382e6e9dea0b8a53ba6a0597"
+      },
+      "digest": "b7c5a4a8f964c5c536b7af7d996384dcb072219ed9b92f38124c1fc7c36c4e8b"
+    },
     {
       "id": "ship/flashylabs-github/3376b992ce21",
       "repo": "repo/flashylabs-github",
