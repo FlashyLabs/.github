@@ -2,8 +2,44 @@
   "shipped": "1",
   "source": "repo/flashylabs-github",
   "org": "org/flashylabs",
-  "generated": "2026-08-31T10:59:10.764Z",
+  "generated": "2026-09-01T09:30:17.185Z",
   "entries": [
+    {
+      "id": "ship/flashylabs-github/3376b992ce21",
+      "repo": "repo/flashylabs-github",
+      "at": "2026-08-31T19:45:06Z",
+      "kind": "fix",
+      "title": "Re-vendor the drifted copies [vercel skip]",
+      "by": [
+        "agent/unattributed"
+      ],
+      "asserted": "2026-09-01",
+      "assertedBy": "agent/flashylabs-github-ci",
+      "visibility": "public",
+      "detail": "Two files, and one of them had never been compared. estate-hygiene compared\nvendor-*.mjs and three check-* scripts; scripts/emit-frontdoor.mjs was carried\nunder its own name and matched neither pattern, so it drifted here unnoticed —\nan emitter that disagrees with the estate's about what a door contains.\n\nvendor-shiplog.mjs brings the hold applied at projection, so it can retract an\nentry already sealed public, and a bookkeeping filter that tolerates the\n[skip ci] suffix rather than sealing every refresh commit as shipped work.\n\nKind: fix",
+      "refs": {
+        "commit": "3376b992ce21cc16b93c507001332faae1a94671"
+      },
+      "digest": "9e6ae26fdf12f96f30ab6905bfffd67f4e2c46720ec030c1a912829828cd38bc"
+    },
+    {
+      "id": "ship/flashylabs-github/d47e3443fcc4",
+      "repo": "repo/flashylabs-github",
+      "at": "2026-08-31T17:39:49Z",
+      "kind": "docs",
+      "title": "A README for the repository, distinct from the org's front page [vercel skip]",
+      "by": [
+        "agent/unattributed"
+      ],
+      "asserted": "2026-09-01",
+      "assertedBy": "agent/flashylabs-github-ci",
+      "visibility": "public",
+      "detail": "This repository had none, which matters more here than elsewhere: it holds\nprofile/README.md, the page GitHub renders at github.com/FlashyLabs, and\nsomebody looking for 'the README' finds a public marketing page and edits it.\n\nSays which file is which, what the four record fragments are, and the two rules\nthat bite: vendor-*.mjs are byte-identical copies that disagree rather than\nbreak when edited, and the fragments are generated.\n\nKind: docs",
+      "refs": {
+        "commit": "d47e3443fcc45731661daa3bd9d92d266524183b"
+      },
+      "digest": "0fa25e52fe9fedde64a7fdcb7039d773fcd321480a6f6b75b9edd1c9c65087a2"
+    },
     {
       "id": "ship/flashylabs-github/06f426afe385",
       "repo": "repo/flashylabs-github",
