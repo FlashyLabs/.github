@@ -2,8 +2,26 @@
   "shipped": "1",
   "source": "repo/flashylabs-github",
   "org": "org/flashylabs",
-  "generated": "2026-09-07T09:30:21.692Z",
+  "generated": "2026-09-07T13:51:08.290Z",
   "entries": [
+    {
+      "id": "ship/flashylabs-github/6a8e1b3b8211",
+      "repo": "repo/flashylabs-github",
+      "at": "2026-09-07T13:50:48Z",
+      "kind": "feature",
+      "title": "estate-authors: bring the commit-address map back into step",
+      "by": [
+        "agent/claude"
+      ],
+      "asserted": "2026-09-07",
+      "assertedBy": "agent/flashylabs-github-ci",
+      "visibility": "public",
+      "detail": "Written by flashyos tools/estate-authors.mjs, which holds the estate's commit\naddresses once. An unmapped address files every entry under the default\nidentity, so the log reads fully attributed while the attribution is wrong.\n\nKind: chore\n\nCo-Authored-By: Claude Opus 5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01DryqvxX93nEakD77pNANCt",
+      "refs": {
+        "commit": "6a8e1b3b82110108b279870d3e50931484bda667"
+      },
+      "digest": "dc8021571a5845c0a4efea548b23d72c8a29719b8399bce68f4175041e9e29f1"
+    },
     {
       "id": "ship/flashylabs-github/95932a0e64a1",
       "repo": "repo/flashylabs-github",
