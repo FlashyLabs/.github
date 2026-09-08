@@ -2,8 +2,26 @@
   "shipped": "1",
   "source": "repo/flashylabs-github",
   "org": "org/flashylabs",
-  "generated": "2026-09-08T08:56:47.651Z",
+  "generated": "2026-09-08T12:38:10.786Z",
   "entries": [
+    {
+      "id": "ship/flashylabs-github/8893f954250d",
+      "repo": "repo/flashylabs-github",
+      "at": "2026-09-08T12:38:00Z",
+      "kind": "other",
+      "title": "Re-vendor check-directory.mjs: it never took dependsOn",
+      "by": [
+        "agent/claude"
+      ],
+      "asserted": "2026-09-08",
+      "assertedBy": "agent/flashylabs-github-ci",
+      "visibility": "public",
+      "detail": "`@flashyos/directory` added the `dependsOn` edge type — the only edge a\nstranger can check without asking us, since a version range is verifiable\nfrom a registry — and the vendored checker in flashyos was updated with\nit. This copy was not, so it would reject a valid `dependsOn` edge as an\nunknown type while the canonical validator accepts it.\n\nThat is how a vendored copy fails: not by breaking, but by disagreeing,\nsilently, about exactly the field somebody has just changed. Seventeen\nrepositories carried the older copy and the estate's `Vendored emitter\ncurrent` dimension read 15 of 34.\n\nByte-identical to `packages/directory/vendor-check-directory.mjs`;\n`tools/vendored-directory.test.mjs` in flashyos compares every copy and\nfails on any difference.\n\nCo-Authored-By: Claude Opus 5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01BjzD1kWqueq1ArT1m4mZsy",
+      "refs": {
+        "commit": "8893f954250d80f9f5dea28f38218c84f34bdd3e"
+      },
+      "digest": "140b8b38994b29d18dc37c3d9cec1e44123bda48bc31ba225a861b86a265c2c0"
+    },
     {
       "id": "ship/flashylabs-github/6a8e1b3b8211",
       "repo": "repo/flashylabs-github",
